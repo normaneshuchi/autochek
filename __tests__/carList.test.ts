@@ -1,9 +1,9 @@
 import { createMocks } from 'node-mocks-http';
-import handler from '../../pages/api/popular';
+import handler from '../pages/api/cars';
 
 
-describe('/api/popular', () => {
-  test('returns a message with a list of popular car brands', async () => {
+describe('/api/cars', () => {
+  test('returns a message with a list of cars', async () => {
     const { req, res } = createMocks({
       method: 'GET'
     });

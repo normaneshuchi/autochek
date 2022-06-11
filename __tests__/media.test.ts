@@ -1,5 +1,5 @@
 import { createMocks } from 'node-mocks-http';
-import handler from '../../pages/api/cars/media/[id]';
+import handler from '../pages/api/cars/media/[id]';
 
 
 describe('/api/cars/media/[media]', () => {
