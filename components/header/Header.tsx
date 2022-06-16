@@ -68,7 +68,7 @@ function Header() {
 								<label className="custom-control-label" >Remember me?</label>
 							</div>
 						</div>
-						<p className="text-center dont-do mt-3">Don't have an account?
+						<p className="text-center dont-do mt-3">{"Don't have an account?"}
 							<a href="#" data-toggle="modal" data-target="#exampleModal2">
 								Register Now</a>
 						</p>
