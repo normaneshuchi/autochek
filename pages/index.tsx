@@ -5,6 +5,8 @@ import styles from '../styles/Home.module.css'
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
 import Layout from '../partials/Layout'
 import Banner from '../components/landing/Banner'
+import TopProducts from '../components/landing/TopProducts'
+import { PopularCarResponse } from '../types/popular.type'
 
 const Home: NextPage = ({data}: InferGetServerSidePropsType<typeof getServerSideProps>) => {
 
@@ -12,6 +14,7 @@ const Home: NextPage = ({data}: InferGetServerSidePropsType<typeof getServerSide
   return (
     <Layout>
       <Banner/>
+      <TopProducts cars={data.result} />
     </Layout>
   )
 }
@@ -19,7 +22,7 @@ const Home: NextPage = ({data}: InferGetServerSidePropsType<typeof getServerSide
 export const getServerSideProps: GetServerSideProps = async() => {
   // Fetch data from external API
   const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/popular`)
-  const data = await res.json()
+  const data: PopularCarResponse = await res.json()
 
   // Pass data to the page via props
   return { props: { data } }
