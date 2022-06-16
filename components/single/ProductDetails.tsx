@@ -40,6 +40,12 @@ function ProductDetails({ car, media }: Props) {
                                 <li className="mb-3">
                                     Transmission: {car.transmission}
                                 </li>
+                                <li className="mb-3">
+                                    Exterior Color: {car.exteriorColor}
+                                </li>
+                                <li className="mb-3">
+                                    Interior Color: {car.interiorColor}
+                                </li>
                             </ul>
                         </div>
                         <div className="product-single-w3l">

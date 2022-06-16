@@ -11,6 +11,7 @@ import { SingleCar } from '../types/single-car.type'
 function Single({data, media}: InferGetServerSidePropsType<typeof getServerSideProps>) {
     const car: SingleCar = data
     const carMedia: CarMedia = media
+    console.log(car)
   return (
     <Layout>
       <Banner url={car.imageUrl} />
