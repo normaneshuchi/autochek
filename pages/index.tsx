@@ -10,7 +10,6 @@ import { PopularCarResponse } from '../types/popular.type'
 
 const Home: NextPage = ({data}: InferGetServerSidePropsType<typeof getServerSideProps>) => {
 
-  console.log(data);
   return (
     <Layout>
       <Banner/>

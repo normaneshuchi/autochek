@@ -16,7 +16,7 @@ export default class MyDocument extends Document {
                     {/* Theme css */}
                     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
                     <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-                    <link rel="stylesheet" href="css/fontawesome-all.css" />
+                    <link rel="stylesheet" href="/public/css/fontawesome-all.css" />
                     <link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
                     <link href="css/menu.css" rel="stylesheet" type="text/css" media="all" />
                     <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet" />
