@@ -8,11 +8,13 @@ type Props = {
 }
 
 function ProductCard({ car }: Props) {
+    const [src, setSrc] = React.useState(car.imageUrl)
+
     return (
         <div className="col-md-4 product-men mt-5">
             <div className="men-pro-item simpleCart_shelfItem">
                 <div className="men-thumb-item text-center">
-                    <Image layout='responsive' width={120} height={120} src={car.imageUrl} alt={car.title} />
+                    <Image className='img-fluid' layout='responsive' onError={() => setSrc('/images/error.png')} width={120} height={120} src={src} alt={car.title} />
                     <div className="men-cart-pro">
                         <div className="inner-men-cart-pro">
                             <Link href={{pathname: 'single', query: {id: car.id}}}>
@@ -26,7 +28,9 @@ function ProductCard({ car }: Props) {
                         <a>{car.title}</a>
                     </h4>
                     <div className="info-product-price my-2">
-                        <span className="item_price">Ksh. {car.loanValue}</span>
+                        <span className="item_price">Ksh. {car.loanValue.toLocaleString(undefined, ({maximumFractionDigits: 2}))}</span>
+													
+
                         {/* <del>$280.00</del> */}
                     </div>
                 </div>
