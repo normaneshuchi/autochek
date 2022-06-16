@@ -1,7 +1,7 @@
 import React from 'react';
-import Document, {Html, Head, Main, NextScript} from 'next/document';
-import {ServerStyleSheets} from '@mui/styles';
-import {theme} from '../common/theme/theme';
+import Document, { Html, Head, Main, NextScript } from 'next/document';
+import { ServerStyleSheets } from '@mui/styles';
+import { theme } from '../common/theme/theme';
 
 export default class MyDocument extends Document {
     render() {
@@ -10,17 +10,28 @@ export default class MyDocument extends Document {
             <Html lang="en">
                 <Head>
                     {/* dv4loader for app loading */}
-                    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"/>
-                    <meta name="theme-color" content={theme.palette.primary.main}/>
+                    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
+                    <meta name="theme-color" content={theme.palette.primary.main} />
                     {/* PWA primary color */}
+                    {/* Theme css */}
+                    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+                    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+                    <link rel="stylesheet" href="css/fontawesome-all.css" />
+                    <link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+                    <link href="css/menu.css" rel="stylesheet" type="text/css" media="all" />
+                    <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet" />
+                    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+                        rel="stylesheet" />
                 </Head>
-                <script src="https://cdn.jsdelivr.net/npm/@dv4all/loaders@1.0.1/lib/dv4loaders.cjs.min.js"/>
+                <script src="https://cdn.jsdelivr.net/npm/@dv4all/loaders@1.0.1/lib/dv4loaders.cjs.min.js" />
                 <body>
-                <Main/>
-                <NextScript/>
-                <script data-jsd-embedded data-key="78940353-6461-41a5-8cc0-5fbe54b14fc9"
+                    <Main />
+                    <NextScript />
+                    <script data-jsd-embedded data-key="78940353-6461-41a5-8cc0-5fbe54b14fc9"
                         data-base-url="https://jsd-widget.atlassian.com"
-                        src="https://jsd-widget.atlassian.com/assets/embed.js"/>
+                        src="https://jsd-widget.atlassian.com/assets/embed.js" />
+                    <script src="js/jquery-2.2.3.min.js"></script>
+                    <script src="js/jquery.magnific-popup.js"></script>
                 </body>
             </Html>
         );

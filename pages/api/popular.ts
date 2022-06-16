@@ -8,7 +8,7 @@ export default function handler(
   res: NextApiResponse<any>
 ) {
 
-    const url = `${process.env.API_URL}/inventory/make?popular=true`
+    const url = `${process.env.API_URL}/inventory/car/search?country=KE`
     axios.get(url).then(response => {
         res.status(response.status).json(response.data)
         res.end();
